@@ -56,66 +56,66 @@ listener | 点击监听，返回 dialog对象，pos所在list的位置, str点�
 
 ```JAVA
 new BottomDialog.Builder(MainActivity.this)
-                        .setFragmentManager(getSupportFragmentManager())
-                        .setCancel("取消")
-                        .setCancelTextColor(Color.parseColor("#FF0000"))
-                        .setCancelTextSize(16)
-                        .setList(new String[]{"拍照", "从相册中选择"})
-                        .setListener(MainActivity.this)
-                        .build();
+     		.setFragmentManager(getSupportFragmentManager())
+          .setCancel("取消")
+          .setCancelTextColor(Color.parseColor("#FF0000"))
+          .setCancelTextSize(16)
+          .setList(new String[]{"拍照", "从相册中选择"})
+          .setListener(MainActivity.this)
+          .build();
 ```
 有提示无取消
 
 ```JAVA
 new BottomDialog.Builder(MainActivity.this)
-                        .setFragmentManager(getSupportFragmentManager())
-                        .setHint("选择性别")
-                        .setIsRect(true)
-                        .setHintTextSize(12)
-                        .setHintTextColor(Color.parseColor("#313131"))
-                        .setHintBgColor(Color.parseColor("#E5E5E5"))
-                        .setList(new String[]{"男", "女", "保密"})
-                        .setListener(MainActivity.this)
-                        .build();
+          .setFragmentManager(getSupportFragmentManager())
+          .setHint("选择性别")
+          .setIsRect(true)
+          .setHintTextSize(12)
+          .setHintTextColor(Color.parseColor("#313131"))
+          .setHintBgColor(Color.parseColor("#E5E5E5"))
+          .setList(new String[]{"男", "女", "保密"})
+          .setListener(MainActivity.this)
+          .build();
 ```
 无提示无取消
 
 ```JAVA
 new BottomDialog.Builder(MainActivity.this)
-                        .setFragmentManager(getSupportFragmentManager())
-                        .setList(new String[]{"第一", "第二", "第三", "第四"})
-                        .setListener(MainActivity.this)
-                        .build();
+          .setFragmentManager(getSupportFragmentManager())
+          .setList(new String[]{"第一", "第二", "第三", "第四"})
+          .setListener(MainActivity.this)
+          .build();
 ```
 有提示有取消
 
 ```JAVA
 new BottomDialog.Builder(MainActivity.this)
-                        .setFragmentManager(getSupportFragmentManager())
-                        .setHint("退出后将情况记录")
-                        .setHintBgColor(Color.parseColor("#E5E5E5"))
-                        .setHintTextSize(12)
-                        .setHintTextColor(Color.parseColor("#313131"))
-                        .setCancel("取消")
-                        .setCancelTextSize(16)
-                        .setCancelTextColor(Color.parseColor("#FF0000"))
-                        .setIsRect(true)
-                        .setList(new String[]{"男", "女", "保密"})
-                        .setListener(MainActivity.this)
-                        .build();
+          .setFragmentManager(getSupportFragmentManager())
+          .setHint("退出后将情况记录")
+          .setHintBgColor(Color.parseColor("#E5E5E5"))
+          .setHintTextSize(12)
+          .setHintTextColor(Color.parseColor("#313131"))
+          .setCancel("取消")
+          .setCancelTextSize(16)
+          .setCancelTextColor(Color.parseColor("#FF0000"))
+          .setIsRect(true)
+          .setList(new String[]{"男", "女", "保密"})
+          .setListener(MainActivity.this)
+          .build();
 ```
 添加了自定义View
 
 ```JAVA
 View view = LayoutInflater.from(MainActivity.this).inflate(R.layout.dialog_title,null);
-                view.findViewById(R.id.cancel).setOnClickListener(MainActivity.this);
-                view.findViewById(R.id.ok).setOnClickListener(MainActivity.this);
-                new BottomDialog.Builder(MainActivity.this)
-                        .setFragmentManager(getSupportFragmentManager())
-                        .setView(view,0)
-                        .setIsRect(true)
-                        .setList(new String[]{"选项一", "选项二", "选项三"})
-                        .setListener(MainActivity.this)
-                        .build();
+view.findViewById(R.id.cancel).setOnClickListener(MainActivity.this);
+view.findViewById(R.id.ok).setOnClickListener(MainActivity.this);
+new BottomDialog.Builder(MainActivity.this)
+          .setFragmentManager(getSupportFragmentManager())
+          .setView(view,0)
+          .setIsRect(true)
+          .setList(new String[]{"选项一", "选项二", "选项三"})
+          .setListener(MainActivity.this)
+          .build();
 ```
          
